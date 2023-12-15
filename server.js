@@ -13,6 +13,12 @@ app.get("/greeting/:name", (req, res) => {
     res.send(`<h1>What's up, ${name}</h1>`)
 })
 
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+    const total = req.params.total
+    const tipPercentage = req.params.tipPercentage
+    res.send(`<h1>${tipPercentage}</h1>`)
+})
+
 
 
 
